@@ -13,7 +13,6 @@ const images = [
   },
 ];
 const container = document.querySelector(".gallery");
-console.log(container);
 const galleryEl = images
   .map(
     ({ url, alt }) =>
@@ -22,4 +21,3 @@ const galleryEl = images
   .join("");
 
 container.insertAdjacentHTML("beforeend", galleryEl);
-console.log(galleryEl);

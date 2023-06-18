@@ -1,15 +1,12 @@
 const formLog = document.querySelector(".login-form");
-console.log(formLog);
 
 formLog.addEventListener("submit", hendlerFormLog);
 
 function hendlerFormLog(evt) {
   evt.preventDefault();
 
-  console.log(evt.currentTarget.elements);
-
   const { email, password } = evt.currentTarget.elements;
-  if (!email.value || !password.value) {
+  if (!email.value.trim() || !password.value.trim()) {
     return alert`Всі поля повинні бути заповнені`;
   }
 
@@ -18,6 +15,5 @@ function hendlerFormLog(evt) {
     password: password.value,
   };
   console.log("data", data);
-  console.log(Object.keys(evt.currentTarget.elements));
   evt.currentTarget.reset();
 }

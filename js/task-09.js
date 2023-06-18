@@ -1,9 +1,6 @@
 const bodyEl = document.querySelector(".widget");
 const btnEl = document.querySelector(".change-color");
 const spanEl = document.querySelector(".color");
-console.log(bodyEl);
-console.log(btnEl);
-console.log(spanEl);
 
 btnEl.addEventListener("click", () => {
   let hexColor = getRandomHexColor();
